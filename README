@@ -1,0 +1,3 @@
+Run sass: sass src/sass/global.scss src/styles/global.css --watch
+
+Responsive: 

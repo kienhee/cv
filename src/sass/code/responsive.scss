@@ -1,0 +1,14 @@
+// Desktop
+@media (min-width: 64rem) { // 1024px / 16 = 64rem
+  // Desktop styles here
+}
+
+// Tablet
+@media (min-width: 48rem) and (max-width: 63.99875rem) { // 768px / 16 = 48rem, 1023.98px / 16 = 63.99875rem
+  // Tablet styles here
+}
+
+// Mobile
+@media (max-width: 47.99875rem) { // 767.98px / 16 = 47.99875rem
+  // Mobile styles here
+}

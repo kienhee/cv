@@ -1,0 +1,26 @@
+.navbar {
+  width: 100%;
+  height: $height_navbar;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+  background: $gray_default;
+  &_menu {
+    display: flex; 
+    justify-content: space-between;
+  }
+  &_logo {
+    font-size: 1.875rem ;
+    font-weight: bold;
+    color: $gray_900;
+  }
+  &_links {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center; 
+
+    &_item {
+      font-weight: 500;
+    }
+  }
+}

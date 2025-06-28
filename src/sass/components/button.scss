@@ -1,0 +1,17 @@
+.btn-primary {
+  padding: .375rem 1rem;
+  border-radius: 1rem;
+  color: $gray_50;
+  font-weight: 500;
+  font-size: 1rem;
+  background: $gray_900;
+  user-select: none;
+  cursor: pointer;
+  &:hover {
+    background: $gray_700;
+  }
+
+  &:active {
+    background: $gray_800;
+  }
+}
