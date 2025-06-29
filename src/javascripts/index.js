@@ -1,4 +1,8 @@
-$(function () {
+
+(function ($) {
+
+  "use strict";
+
   // Biến DOM
   const $toggle = $('#navbarToggle');
   const $links = $('#navbarLinks');
@@ -92,4 +96,9 @@ $(function () {
 
   // Copyright year
   $('#copyright').text(`${new Date().getFullYear()} | copyright By Kienhee 💖`);
-});
+
+  $(window).on('load', function () {
+    $('.preloader').fadeOut();
+  });
+
+})(jQuery);
