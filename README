@@ -1,3 +1,23 @@
-Run sass: sass src/sass/global.scss src/styles/global.css --watch
+# CV Project
 
-Responsive: 
+This project uses [Sass](https://sass-lang.com/) for styling. The main Sass file is located at `src/sass/global.scss` and is compiled to `src/styles/global.css`.
+
+## Getting Started
+
+1. Make sure you have [Sass](https://sass-lang.com/install) installed.
+2. To watch and compile Sass files automatically, run:
+
+  ```
+  sass src/sass/global.scss src/styles/global.css --watch
+  ```
+
+3. Edit your Sass files in `src/sass/` and the CSS will update automatically.
+
+## Project Structure
+
+- `src/sass/` - Source Sass files
+- `src/styles/` - Compiled CSS files
+
+## License
+
+This project is licensed under the MIT License.

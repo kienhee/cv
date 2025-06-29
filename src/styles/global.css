@@ -413,7 +413,6 @@ body {
   position: relative;
   display: inline-block;
   padding: 4px 0;
-  color: #4b5563;
   transition: color 0.3s ease;
 }
 .navbar_links_item:not(:last-child) a::after {
