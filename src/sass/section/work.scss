@@ -45,7 +45,7 @@
   &_preview {
     padding: 3rem;
     background: $gray_100;
-
+    flex: 1;
     & img {
       width: 100%;
       height: auto;
@@ -56,7 +56,7 @@
 
   &_information {
     padding: 3rem;
-
+    flex:1;
     h3 {
       font-weight: 700;
       color: $gray_900;

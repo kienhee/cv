@@ -6,135 +6,9 @@
   scroll-behavior: smooth;
 }
 
-html,
-body,
-div,
-span,
-applet,
-object,
-iframe,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6,
-p,
-blockquote,
-pre,
-a,
-abbr,
-acronym,
-address,
-big,
-cite,
-code,
-del,
-dfn,
-em,
-img,
-ins,
-kbd,
-q,
-s,
-samp,
-small,
-strike,
-strong,
-sub,
-sup,
-tt,
-var,
-b,
-u,
-i,
-center,
-dl,
-dt,
-dd,
-ol,
-ul,
-li,
-fieldset,
-form,
-label,
-legend,
-table,
-caption,
-tbody,
-tfoot,
-thead,
-tr,
-th,
-td,
-article,
-aside,
-canvas,
-details,
-embed,
-figure,
-figcaption,
-footer,
-header,
-hgroup,
-menu,
-nav,
-output,
-ruby,
-section,
-summary,
-time,
-mark,
-audio,
-video {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
-
-/* HTML5 display-role reset for older browsers */
-article,
-aside,
-details,
-figcaption,
-figure,
-footer,
-header,
-hgroup,
-menu,
-nav,
-section {
-  display: block;
-}
-
-body {
-  line-height: 1.5;
-}
-
 ol,
 ul {
   list-style: none;
-}
-
-blockquote,
-q {
-  quotes: none;
-}
-
-blockquote:before,
-blockquote:after,
-q:before,
-q:after {
-  content: "";
-  content: none;
-}
-
-table {
-  border-collapse: collapse;
-  border-spacing: 0;
 }
 
 a {
@@ -147,6 +21,7 @@ body {
   font-weight: 400;
   font-size: 16px;
   color: #4b5563;
+  line-height: 1.5;
 }
 
 .container {
@@ -770,6 +645,18 @@ body {
   overflow: hidden;
   background: #f9fafb;
 }
+@media (min-width: 48rem) and (max-width: 63.99875rem) {
+  .experience {
+    height: auto;
+    padding: 5rem 0;
+  }
+}
+@media (max-width: 47.99875rem) {
+  .experience {
+    height: auto;
+    padding: 3.125rem 0;
+  }
+}
 .experience_container {
   display: flex;
   align-items: center;
@@ -782,6 +669,10 @@ body {
   align-items: center;
   justify-content: center;
 }
+.experience_logo img {
+  width: 100%;
+  object-fit: cover;
+}
 .experience_card {
   padding: 1.875rem;
   border-radius: 0.75rem;
@@ -790,15 +681,30 @@ body {
   gap: 4rem;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
+@media (min-width: 48rem) and (max-width: 63.99875rem) {
+  .experience_card {
+    gap: 1.25rem;
+    padding: 1.25rem;
+  }
+}
 @media (max-width: 47.99875rem) {
   .experience_card {
     flex-direction: column;
     gap: 1rem;
   }
 }
+.experience_logo, .experience_date {
+  flex: 1;
+}
+.experience_information {
+  flex: 2;
+}
 @media (max-width: 47.99875rem) {
   .experience_logo {
     order: 1;
+  }
+  .experience_logo img {
+    height: 6.25rem;
   }
   .experience_date {
     order: 2;
@@ -859,6 +765,7 @@ body {
 .work_preview {
   padding: 3rem;
   background: #f3f4f6;
+  flex: 1;
 }
 .work_preview img {
   width: 100%;
@@ -868,6 +775,7 @@ body {
 }
 .work_information {
   padding: 3rem;
+  flex: 1;
 }
 .work_information h3 {
   font-weight: 700;

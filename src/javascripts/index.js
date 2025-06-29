@@ -39,6 +39,42 @@
     $menuItems.removeClass('active');
     $(this).addClass('active');
   });
+  // Active menu item on scroll
+  const sectionIds = ['#about', '#skills', '#experience', '#works', '#contact'];
+  const $menuLinks = $('.navbar_links_item a');
+
+  function onScrollActiveMenu() {
+    let scrollPos = $(window).scrollTop();
+    let headerHeight = $navbar.outerHeight() || 0;
+    let found = false;
+    let windowBottom = scrollPos + $(window).height();
+    for (let i = sectionIds.length - 1; i >= 0; i--) {
+      let section = $(sectionIds[i]);
+      if (section.length) {
+        let offset = section.offset().top - headerHeight - 2;
+        let sectionBottom = section.offset().top + section.outerHeight();
+        // Nếu là section cuối cùng và đã gần cuối trang thì luôn active
+        if (i === sectionIds.length - 1 && windowBottom >= $(document).height() - 10) {
+          $menuItems.removeClass('active');
+          $menuLinks.filter(`[href='${sectionIds[i]}']`).parent().addClass('active');
+          found = true;
+          break;
+        }
+        if (scrollPos >= offset) {
+          $menuItems.removeClass('active');
+          $menuLinks.filter(`[href='${sectionIds[i]}']`).parent().addClass('active');
+          found = true;
+          break;
+        }
+      }
+    }
+    if (!found) {
+      $menuItems.removeClass('active');
+    }
+  }
+
+  $(window).on('scroll', onScrollActiveMenu);
+  onScrollActiveMenu();
 
   // Cập nhật vị trí progressBar theo chiều cao navbar
   function updateProgressBarTop() {
