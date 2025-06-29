@@ -1,6 +1,6 @@
 
 (function ($) {
-
+  AOS.init();
   "use strict";
 
   // Biến DOM
@@ -138,3 +138,48 @@
   });
 
 })(jQuery);
+
+// use a script tag or an external JS file
+$(function () {
+  gsap.registerPlugin(ScrollTrigger, ScrollSmoother);
+  let smoother = ScrollSmoother.create({
+    wrapper: "#smooth-wrapper",
+    content: "#smooth-content",
+    smooth: 2, // seconds
+    effects: true,
+  });
+
+  gsap.to(".skills_item", {
+    duration: 1,
+    rotation: 360,
+    opacity: 1,
+    delay: 0.5,
+    stagger: 0.2,
+    ease: "sine.out",
+    force3D: true
+  });
+
+  $(".skills_item").on("click", function () {
+    const tl = gsap.timeline();
+
+    // 1. Ẩn các icon
+    tl.to(".skills_item", {
+      duration: 0.5,
+      opacity: 0,
+      y: -100,
+      stagger: 0.1,
+      ease: "back.in"
+    });
+
+    // 2. Hiện lại icon với hiệu ứng mượt
+    tl.to(".skills_item", {
+      duration: 0.5,
+      opacity: 1,
+      y: 0,
+      rotation: 360,
+      stagger: 0.2,
+      ease: "sine.out",
+      force3D: true
+    }, "+=0.3"); // delay nhỏ trước khi hiện lại (0.3s)
+  });
+});

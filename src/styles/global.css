@@ -181,6 +181,7 @@ body {
   font-size: 1.875rem;
   font-weight: bold;
   color: #111827;
+  user-select: none;
 }
 @media (max-width: 47.99875rem) {
   .navbar_logo {
@@ -702,9 +703,6 @@ body {
 @media (max-width: 47.99875rem) {
   .experience_logo {
     order: 1;
-  }
-  .experience_logo img {
-    height: 6.25rem;
   }
   .experience_date {
     order: 2;
