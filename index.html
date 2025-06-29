@@ -22,19 +22,25 @@
   <header class="navbar">
     <div class="container">
       <nav class="navbar_menu">
-        <div class="navbar_logo">
-          <a href="/"> Logo </a>
+        <div class="navbar_logo"><a href="/">&lt;/Kienhee&gt;</a></div>
+        <div class="navbar_toggle" id="navbarToggle">
+          <span></span><span></span><span></span>
         </div>
-        <ul class="navbar_links">
-          <li class="navbar_links_item"><a href="#about">About</a></li>
+        <ul class="navbar_links" id="navbarLinks">
+          <li class="navbar_links_item active"><a href="#about">About</a></li>
           <li class="navbar_links_item"><a href="#skills">Skills</a></li>
-          <li class="navbar_links_item"><a href="#projects">Projects</a></li>
+          <li class="navbar_links_item"><a href="#experience">Experience</a></li>
+          <li class="navbar_links_item"><a href="#works">Works</a></li>
           <li class="navbar_links_item"><a href="#contact">Contact</a></li>
-          <li class="navbar_links_item btn-primary"><a href="#contact">Download CV</a></li>
+          <li class="navbar_links_item btn btn-primary"><a href="">Download CV</a></li>
         </ul>
       </nav>
+      <div class="overlay" id="navbarOverlay"></div>
     </div>
   </header>
+  <div id="scrollProgressBar"></div>
+  
+  
   <!-- Header end -->
 
   <!-- Main start -->
@@ -155,6 +161,144 @@
         </div>
       </div>
     </section>
+
+    <section class="work" id="works">
+      <div class="container work_container">
+        <h2 class="work_title title">Works</h2>
+        <p class="work_description description">Some of the noteworthy projects I have built:</p>
+        <div class="work_list">
+          <article class="work_card">
+            <div class="work_preview">
+              <img src="./src/images/Picture.png" alt="">
+            </div>
+            <div class="work_information">
+              <h3>Fiskil</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante
+              ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+              <ul class="work_technologies">
+                <li><button class="btn btn-secondary">React</button></li>
+                <li><button class="btn btn-secondary">Next.js</button></li>
+                <li><button class="btn btn-secondary">Typescript</button></li>
+                <li><button class="btn btn-secondary">Nest.js</button></li>
+                <li><button class="btn btn-secondary">PostgreSQL</button></li>
+                <li><button class="btn btn-secondary">Tailwindcss</button></li>
+                <li><button class="btn btn-secondary">Figma</button></li>
+                <li><button class="btn btn-secondary">Cypress</button></li>
+                <li><button class="btn btn-secondary">Storybook</button></li>
+                <li><button class="btn btn-secondary">Git</button></li>
+              </ul>
+              <a href="#" class="work_link_detail"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 19V25C24 25.5304 23.7893 26.0391 23.4142 26.4142C23.0391 26.7893 22.5304 27 22 27H11C10.4696 27 9.96086 26.7893 9.58579 26.4142C9.21071 26.0391 9 25.5304 9 25V14C9 13.4696 9.21071 12.9609 9.58579 12.5858C9.96086 12.2107 10.4696 12 11 12H17"
+                  stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 9H27V15" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 20L27 9" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>View detail</span>
+                </a>
+            </div>
+            
+          </article>
+          <article class="work_card">
+            <div class="work_preview">
+              <img src="./src/images/Picture.png" alt="">
+            </div>
+            <div class="work_information">
+              <h3>Fiskil</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante
+              ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+              <ul class="work_technologies">
+                <li><button class="btn btn-secondary">React</button></li>
+                <li><button class="btn btn-secondary">Next.js</button></li>
+                <li><button class="btn btn-secondary">Typescript</button></li>
+                <li><button class="btn btn-secondary">Nest.js</button></li>
+                <li><button class="btn btn-secondary">PostgreSQL</button></li>
+                <li><button class="btn btn-secondary">Tailwindcss</button></li>
+                <li><button class="btn btn-secondary">Figma</button></li>
+                <li><button class="btn btn-secondary">Cypress</button></li>
+                <li><button class="btn btn-secondary">Storybook</button></li>
+                <li><button class="btn btn-secondary">Git</button></li>
+              </ul>
+              <a href="#" class="work_link_detail"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 19V25C24 25.5304 23.7893 26.0391 23.4142 26.4142C23.0391 26.7893 22.5304 27 22 27H11C10.4696 27 9.96086 26.7893 9.58579 26.4142C9.21071 26.0391 9 25.5304 9 25V14C9 13.4696 9.21071 12.9609 9.58579 12.5858C9.96086 12.2107 10.4696 12 11 12H17"
+                  stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 9H27V15" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 20L27 9" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>View detail</span>
+                </a>
+            </div>
+            
+          </article>
+          <article class="work_card">
+            <div class="work_preview">
+              <img src="./src/images/Picture.png" alt="">
+            </div>
+            <div class="work_information">
+              <h3>Fiskil</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante
+              ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+              <ul class="work_technologies">
+                <li><button class="btn btn-secondary">React</button></li>
+                <li><button class="btn btn-secondary">Next.js</button></li>
+                <li><button class="btn btn-secondary">Typescript</button></li>
+                <li><button class="btn btn-secondary">Nest.js</button></li>
+                <li><button class="btn btn-secondary">PostgreSQL</button></li>
+                <li><button class="btn btn-secondary">Tailwindcss</button></li>
+                <li><button class="btn btn-secondary">Figma</button></li>
+                <li><button class="btn btn-secondary">Cypress</button></li>
+                <li><button class="btn btn-secondary">Storybook</button></li>
+                <li><button class="btn btn-secondary">Git</button></li>
+              </ul>
+              <a href="#" class="work_link_detail"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 19V25C24 25.5304 23.7893 26.0391 23.4142 26.4142C23.0391 26.7893 22.5304 27 22 27H11C10.4696 27 9.96086 26.7893 9.58579 26.4142C9.21071 26.0391 9 25.5304 9 25V14C9 13.4696 9.21071 12.9609 9.58579 12.5858C9.96086 12.2107 10.4696 12 11 12H17"
+                  stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 9H27V15" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 20L27 9" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>View detail</span>
+                </a>
+            </div>
+            
+          </article>
+          <article class="work_card">
+            <div class="work_preview">
+              <img src="./src/images/Picture.png" alt="">
+            </div>
+            <div class="work_information">
+              <h3>Fiskil</h3>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Maecenas nec urna ac tellus volutpat viverra. Vestibulum ante
+              ipsum primis in faucibus orci luctus et ultrices posuere cubilia curae.</p>
+              <ul class="work_technologies">
+                <li><button class="btn btn-secondary">React</button></li>
+                <li><button class="btn btn-secondary">Next.js</button></li>
+                <li><button class="btn btn-secondary">Typescript</button></li>
+                <li><button class="btn btn-secondary">Nest.js</button></li>
+                <li><button class="btn btn-secondary">PostgreSQL</button></li>
+                <li><button class="btn btn-secondary">Tailwindcss</button></li>
+                <li><button class="btn btn-secondary">Figma</button></li>
+                <li><button class="btn btn-secondary">Cypress</button></li>
+                <li><button class="btn btn-secondary">Storybook</button></li>
+                <li><button class="btn btn-secondary">Git</button></li>
+              </ul>
+              <a href="#" class="work_link_detail"><svg width="36" height="36" viewBox="0 0 36 36" fill="none" xmlns="http://www.w3.org/2000/svg">
+                <path
+                  d="M24 19V25C24 25.5304 23.7893 26.0391 23.4142 26.4142C23.0391 26.7893 22.5304 27 22 27H11C10.4696 27 9.96086 26.7893 9.58579 26.4142C9.21071 26.0391 9 25.5304 9 25V14C9 13.4696 9.21071 12.9609 9.58579 12.5858C9.96086 12.2107 10.4696 12 11 12H17"
+                  stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M21 9H27V15" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+                <path d="M16 20L27 9" stroke="#4B5563" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" />
+              </svg>
+              <span>View detail</span>
+                </a>
+            </div>
+            
+          </article>
+        </div>
+      </div>
+    </section>
+
   </main>
   <!-- Main end -->
 
@@ -165,31 +309,41 @@
         What’s next? Feel free to reach out to me if you're looking for a developer, have a query, or simply want to
         connect.
       </p>
-      <p class="footer_email">
+    
+      <!-- Contact items -->
+      <div class="footer_contact_item">
         <box-icon name="envelope" type="solid" color="#4B5563"></box-icon>
-        kienhee.it@gmail.com
-        <button id="copyEmailBtnEmail" title="Copy email"
-          style="background:none;border:none;cursor:pointer;vertical-align:middle;">
+        <span class="copy-text footer_infor">kienhee.it@gmail.com</span>
+        <button class="copy-btn" title="Copy email">
           <box-icon name="copy" color="#4B5563"></box-icon>
         </button>
-      </p>
-      <p class="footer_phone">
+      </div>
+    
+      <div class="footer_contact_item">
         <box-icon name="phone" type="solid" color="#4B5563"></box-icon>
-        0376173628
-        <button id="copyEmailBtnPhone" title="Copy phone"
-          style="background:none;border:none;cursor:pointer;vertical-align:middle;">
+        <span class="copy-text footer_infor">0376173628</span>
+        <button class="copy-btn" title="Copy phone">
           <box-icon name="copy" color="#4B5563"></box-icon>
         </button>
-      </p>
-      <script>
-        document.getElementById('copyEmailBtnEmail').addEventListener('click', function () {
-          navigator.clipboard.writeText('kienhee.it@gmail.com');
-        });
-        document.getElementById('copyEmailBtnPhone').addEventListener('click', function () {
-          navigator.clipboard.writeText('0376173628');
-        });
-      </script>
+      </div>
+    
+      <p style="margin-top: 1.5rem;">You may also find me on these platforms!</p>
+      <div class="footer_socials" style="margin: 16px 0;">
+        <a href="https://facebook.com/" target="_blank" title="Facebook">
+          <box-icon type="logo" name="facebook" color="#4B5563" size="md"></box-icon>
+        </a>
+        <a href="https://instagram.com/" target="_blank" title="Instagram">
+          <box-icon type="logo" name="instagram" color="#4B5563" size="md"></box-icon>
+        </a>
+        <a href="https://linkedin.com/" target="_blank" title="LinkedIn">
+          <box-icon type="logo" name="linkedin" color="#4B5563" size="md"></box-icon>
+        </a>
+        <a href="https://github.com/" target="_blank" title="GitHub">
+          <box-icon type="logo" name="github" color="#4B5563" size="md"></box-icon>
+        </a>
+      </div>
     </div>
+    
     <div class="footer_bottom">
       <p>
         <svg xmlns="http://www.w3.org/2000/svg" style="margin-right: 5px;" width="12" height="12" viewBox="0 0 24 24"
@@ -201,10 +355,16 @@
         <span id="copyright"></span>
       </p>
       <script>
-        document.getElementById('copyright').textContent = `${new Date().getFullYear()} | copyright`;
+       
       </script>
     </div>
   </footer>
+  <button id="backToTop" title="Back to top">
+    <box-icon name="chevron-up" color="#4B5563"></box-icon>
+    </button>
+  <script src="./src/libs/jquery-3.7.1.min.js"></script>
+  <script src="./src/libs/notify.min.js"></script>
+  <script src="./src/javascripts/index.js"></script>
 </body>
 
 </html>

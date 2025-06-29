@@ -1,0 +1,126 @@
+.work {
+  padding: 5.625rem 0;
+  width: 100%;
+  display: flex;
+  &_container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
+
+  &_list {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    gap: $gap_flex_64;
+  }
+
+  &_card {
+    width: 100%;
+    display: flex;
+    gap: 20px;
+    border-radius: 12px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+
+    &:nth-child(even) {
+      flex-direction: row-reverse;
+    }
+
+    // Tablet
+    @media (min-width: 48rem) and (max-width: 63.99875rem) {
+      // Tablet styles here
+    }
+
+    // Mobile
+    @media (max-width: 47.99875rem) {
+      flex-direction: column;
+
+      &:nth-child(even) {
+        flex-direction: column;
+      }
+    }
+  }
+
+  &_preview {
+    padding: 3rem;
+    background: $gray_100;
+
+    & img {
+      width: 100%;
+      height: auto;
+      border-radius: 12px;
+      object-fit: cover;
+    }
+  }
+
+  &_information {
+    padding: 3rem;
+
+    h3 {
+      font-weight: 700;
+      color: $gray_900;
+      font-size: 1.25rem;
+      margin-bottom: 1.5rem;
+    }
+
+    p {
+      margin-bottom: 1.5rem;
+    }
+  }
+
+  // Tablet
+  @media (min-width: 48rem) and (max-width: 63.99875rem) {
+
+    &_preview,
+    &_information {
+      width: 50%;
+      padding: 1rem;
+    }
+  }
+
+  // Mobile
+  @media (max-width: 47.99875rem) {
+
+    &_preview,
+    &_information {
+      width: 100%;
+      padding: 1rem;
+    }
+  }
+
+  &_technologies {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    margin-bottom: 1.5rem;
+  }
+
+  &_link_detail,
+  &__link-detail {
+    display: inline-flex;
+    align-items: center;
+    font-weight: 600;
+    text-decoration: none;
+    overflow: hidden;
+    position: relative;
+
+    span {
+      max-width: 0;
+      opacity: 0;
+      white-space: nowrap;
+      overflow: hidden;
+      margin-left: 0;
+      transform: translateX(-10px);
+      transition: all 0.3s ease;
+      color: #4B5563;
+    }
+
+    &:hover span {
+      max-width: 200px;
+      opacity: 1;
+      margin-left: 8px;
+      transform: translateX(0);
+    }
+  }
+}

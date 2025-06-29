@@ -1,17 +1,35 @@
-.btn-primary {
+.btn {
   padding: .375rem 1rem;
   border-radius: 1rem;
-  color: $gray_50;
   font-weight: 500;
   font-size: 1rem;
-  background: $gray_900;
   user-select: none;
   cursor: pointer;
+  // reset css button
+  border: none;
+  outline: none;
+  box-shadow: none;
+}
+
+.btn-primary {
+  color: $gray_50;
+  font-size: 1rem;
+  background: $gray_900;
+
   &:hover {
     background: $gray_700;
   }
 
   &:active {
     background: $gray_800;
+  }
+}
+
+.btn-secondary {
+  color: $gray_600;
+  background: $gray_200;
+
+  &:hover {
+    background-color: $gray_300;
   }
 }

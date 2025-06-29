@@ -1,20 +1,51 @@
 .about {
   width: 100%;
   height: 100vh;
-  border: red solid 1px;
   display: flex;
   overflow: hidden;
   background: $gray_50;
+
+  // Tablet
+  @media (min-width: 48rem) and (max-width: 63.99875rem) {
+    height: auto;
+    padding: 5rem 0;
+  }
+
+  // Mobile
+  @media (max-width: 47.99875rem) {
+    height: auto;
+    padding: 3.125rem 0;
+  }
 
   &_container {
     display: flex;
     align-items: center;
     gap: $gap_flex_64;
+
+    // Tablet
+    @media (min-width: 48rem) and (max-width: 63.99875rem) {
+      flex-direction: column;
+    }
+
+    // Mobile
+    @media (max-width: 47.99875rem) {
+      flex-direction: column;
+    }
   }
 
   &_image,
   &_content {
     width: 50%;
+
+    // Tablet
+    @media (min-width: 48rem) and (max-width: 63.99875rem) {
+      width: 80%;
+    }
+
+    // Mobile
+    @media (max-width: 47.99875rem) {
+      width: 100%;
+    }
   }
 
   &_image {
