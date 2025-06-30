@@ -147,6 +147,7 @@ $(function () {
     content: "#smooth-content",
     smooth: 2, // seconds
     effects: true,
+    normalizeScroll: true // giúp scroll mượt hơn trên mọi màn hình
   });
 
   gsap.to(".skills_item", {
