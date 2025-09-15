@@ -1,3 +1,42 @@
+import { animate, stagger, text } from 'https://cdn.jsdelivr.net/npm/animejs/+esm';
+
+const { chars } = text.split('.hero_title', { words: false, chars: true });
+// ------- Heading animation --------
+animate(chars, {
+  // Property keyframes
+  y: [
+    { to: '-2.75rem', ease: 'outExpo', duration: 600 },
+    { to: 0, ease: 'outBounce', duration: 800, delay: 100 }
+  ],
+  // Property specific parameters
+  rotate: {
+    from: '-1turn',
+    delay: 0
+  },
+  delay: stagger(50),
+  ease: 'inOutCirc',
+  loopDelay: 1000,
+  loop: true
+});
+
+// -----------------------------
+// Back to Top Button Feature
+// -----------------------------
+const $backToTop = $('#backToTop');
+
+// Show/hide on scroll
+$(window).on('scroll', function () {
+  if ($(this).scrollTop() > 300) {
+    $backToTop.addClass('show');
+  } else {
+    $backToTop.removeClass('show');
+  }
+});
+
+// Smooth scroll to top
+$backToTop.on('click', function () {
+  $('html, body').animate({ scrollTop: 0 }, 500);
+});
 
 (function ($) {
   AOS.init();
@@ -136,6 +175,56 @@
   $(window).on('load', function () {
     $('.preloader').fadeOut();
   });
+
+  // -----------------------------
+  // Theme (Dark/Light) Toggle
+  // -----------------------------
+  const THEME_KEY = 'preferred-theme';
+  const $themeToggle = $('#themeToggle');
+  const $html = $('html');
+
+  function applyTheme(theme) {
+    const isDark = theme === 'dark';
+    $html.toggleClass('dark', isDark);
+    $themeToggle.attr('aria-label', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+    $themeToggle.attr('title', isDark ? 'Switch to light mode' : 'Switch to dark mode');
+  }
+
+  function getSystemPreference() {
+    return window.matchMedia && window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light';
+  }
+
+  function initTheme() {
+    const stored = localStorage.getItem(THEME_KEY);
+    const theme = stored || getSystemPreference();
+    applyTheme(theme);
+  }
+
+  // Prevent flash: mark preparing, then remove after first theme applied
+  $('html').addClass('preparing-theme');
+  initTheme();
+  setTimeout(() => $('html').removeClass('preparing-theme'), 50);
+
+  // Toggle handler
+  $themeToggle.on('click', function (e) {
+    const isDark = $html.hasClass('dark');
+    const next = isDark ? 'light' : 'dark';
+    applyTheme(next);
+    try { localStorage.setItem(THEME_KEY, next); } catch (e) { /* ignore quota errors */ }
+    // Ripple (still ok for new style)
+    $themeToggle.addClass('ripple');
+    setTimeout(() => $themeToggle.removeClass('ripple'), 650);
+  });
+
+  // Listen to system changes (optional enhancement)
+  if (window.matchMedia) {
+    window.matchMedia('(prefers-color-scheme: dark)').addEventListener('change', (e) => {
+      const stored = localStorage.getItem(THEME_KEY);
+      if (!stored) { // only auto-switch if user hasn't chosen manually
+        applyTheme(e.matches ? 'dark' : 'light');
+      }
+    });
+  }
 
 })(jQuery);
 

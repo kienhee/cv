@@ -13,6 +13,21 @@ This project uses [Sass](https://sass-lang.com/) for styling. The main Sass file
 
 3. Edit your Sass files in `src/sass/` and the CSS will update automatically.
 
+## Dark Mode
+
+Dark Mode is supported and implemented with a class toggle (`.dark`) on the `<html>` element.
+
+- Toggle button (moon / sun icon) in the navbar (`#themeToggle`).
+- Preference persisted in `localStorage` under key `preferred-theme`.
+- If no stored preference, system preference (`prefers-color-scheme`) is applied.
+- Dark overrides live in `src/sass/themes/_dark.scss` (imported explicitly in `global.scss`).
+
+To adjust palette:
+- Edit `src/sass/variables.scss` for base light + dark color scales.
+- Edit `src/sass/themes/_dark.scss` for component-level overrides.
+
+Compilation note: We removed a duplicate `dark.scss` file that caused an ambiguous import error. Make sure to re-run Sass after pulling changes.
+
 ## Project Structure
 
 - `src/sass/` - Source Sass files

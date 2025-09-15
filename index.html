@@ -28,7 +28,11 @@
   <link rel="stylesheet" href="./src/styles/global.css">
 </head>
 
-<body>
+  <body>
+   
+  <!-- Grid Fade Background -->
+  <div id="grid-fade-bg"></div>
+  <div id="grid-dark-bg"></div>
   <!-- Header start -->
   <header class="navbar">
     <div class="container">
@@ -43,6 +47,11 @@
           <li class="navbar_links_item"><a href="#experience">Experience</a></li>
           <li class="navbar_links_item"><a href="#works">Works</a></li>
           <li class="navbar_links_item"><a href="#contact">Contact</a></li>
+          <li class="navbar_links_item">
+            <button id="themeToggle" class="btn btn-secondary" aria-label="Toggle dark mode" title="Toggle dark mode">
+              <span id="themeToggleIcon">🌙</span>
+            </button>
+          </li>
           <li class="navbar_links_item btn btn-primary"><a href="">Download CV</a></li>
         </ul>
       </nav>
@@ -54,7 +63,6 @@
   <!-- Header end -->
   <div id="smooth-wrapper">
     <div id="smooth-content">
-     
 
       <!-- Main start -->
       <main>
@@ -62,7 +70,7 @@
           <div class="container hero_container">
             <div class="hero_content" data-aos="fade-right" data-aos-duration="1000" data-aos-offset="300"
               data-aos-easing="ease-in-sine">
-              <h1 class="hero_title">Hi, I’m Trần Trung Kiên 👋</h1>
+              <h1 class="hero_title">Hi, I’m Trần Trung Kiên <span class="flicker" aria-hidden="true">👋</span><span class="sr-only">(Waving hand)</span></h1>
               <p class="hero_description">I'm a full stack developer (React.js & Node.js) with a focus on creating (and
                 occasionally designing) exceptional
                 digital experiences that are fast, accessible, visually appealing, and responsive. Even though I have
@@ -416,9 +424,7 @@
           </script>
         </div>
       </footer>
-      <button id="backToTop" title="Back to top">
-        <box-icon name="chevron-up" color="#4B5563"></box-icon>
-      </button>
+     
       <!-- preloader -->
       <div class="preloader"
         style="position: fixed;top:0;left:0;width: 100%;height: 100%;background-color: #fff;display: flex;align-items: center;justify-content: center;z-index: 9999;">
@@ -438,9 +444,14 @@
       </div>
     </div>
   </div>
-
+  <button id="backToTop" title="Back to top">
+          <box-icon name="chevron-up" color="#4B5563"></box-icon>
+  </button>
+  <!-- move cusor around -->
+   <div class="move_cusor_around"></div>
   <script src="./src/libs/jquery-3.7.1.min.js"></script>
   <script src="./src/libs/notify.min.js"></script>
+  <script src="./src/libs/typed.umd.js"></script>
   <!-- GSAP core and ScrollSmoother -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/gsap.min.js"></script>
 
@@ -448,7 +459,8 @@
   <!-- ScrollSmoother requires ScrollTrigger -->
   <script src="https://cdn.jsdelivr.net/npm/gsap@3.13.0/dist/ScrollSmoother.min.js"></script>
   <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
-  <script src="./src/javascripts/index.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/animejs/lib/anime.iife.min.js"></script>
+  <script src="./src/javascripts/index.js" type="module"></script>
 </body>
 
 </html>

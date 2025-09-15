@@ -1,3 +1,4 @@
+// Box sizing and scroll behavior
 * {
 	box-sizing: border-box;
 	margin: 0;
@@ -5,20 +6,82 @@
 	scroll-behavior: smooth;
 }
 
+// List styles reset
 ol,
 ul {
 	list-style: none;
 }
 
+// Link styles reset
 a {
 	text-decoration: none;
 	color: inherit;
 }
 
+// Body base styles
 body {
 	font-family: 'Inter', sans-serif;
 	font-weight: 400;
 	font-size: 16px;
 	color: $gray_600;
 	line-height: 1.5;
+	width: 100vw;
+	max-width: 100vw;
+	overflow-x: hidden;
+	position: relative;
+	min-height: 100vh;
+	background: #f8fafc;
+	text-rendering: optimizeSpeed;
+}
+
+// Grid background (light)
+#grid-fade-bg {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background-image:
+		linear-gradient(to right, #e2e8f0 1px, transparent 1px),
+		linear-gradient(to bottom, #e2e8f0 1px, transparent 1px);
+	background-size: 20px 30px;
+	-webkit-mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+	mask-image: radial-gradient(ellipse 70% 60% at 50% 0%, #000 60%, transparent 100%);
+	min-height: 100vh;
+	width: 100vw;
+	background-color: #f8fafc;
+	transition: opacity 0.4s;
+}
+
+// Grid background (dark)
+#grid-dark-bg {
+	position: absolute;
+	inset: 0;
+	z-index: 0;
+	pointer-events: none;
+	background: #020617;
+	background-image:
+		linear-gradient(to right, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+		linear-gradient(to bottom, rgba(71, 85, 105, 0.15) 1px, transparent 1px),
+		radial-gradient(circle at 50% 60%, rgba(236, 72, 153, 0.15) 0%, rgba(168, 85, 247, 0.05) 40%, transparent 70%);
+	background-size: 40px 40px, 40px 40px, 100% 100%;
+	min-height: 100vh;
+	width: 100vw;
+	opacity: 0;
+	transition: opacity 0.4s;
+}
+
+// Theme toggling
+html.dark #grid-fade-bg {
+	opacity: 0;
+	pointer-events: none;
+}
+
+html.dark #grid-dark-bg {
+	opacity: 1;
+	pointer-events: none;
+}
+
+html:not(.dark) #grid-dark-bg {
+	opacity: 0;
+	pointer-events: none;
 }

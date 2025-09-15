@@ -1,0 +1,77 @@
+// Dark mode overrides
+// Apply by adding the class .dark to <html> or <body>
+
+.dark {
+  background-color: $dark_gray_default;
+  color: $dark_gray_600; // base text color flips palette logic
+}
+
+.dark body { background-color: $dark_gray_default; color: $dark_gray_600; }
+
+// General text + titles
+.dark .title { background-color: $dark_gray_200; color: $dark_gray_800; }
+.dark .description { color: $dark_gray_600; }
+
+// Navbar
+.dark .navbar { background: $dark_gray_50; border-bottom: 1px solid $dark_gray_200; }
+.dark .navbar_logo { color: $dark_gray_900; }
+.dark .navbar_links_item:not(:last-child) a::after { background-color: $dark_gray_900; }
+.dark .navbar_links_item.active:not(:last-child),
+.dark .navbar_links_item:not(:last-child) a:hover,
+.dark .navbar_links_item:not(:last-child) a.active { color: $dark_gray_900; }
+
+// Progress bar
+.dark #scrollProgressBar { background-color: $dark_gray_900; }
+
+// Buttons
+.dark .btn-primary { background: $dark_gray_900; color: $dark_gray_50; }
+.dark .btn-primary:hover { background: $dark_gray_800; }
+.dark .btn-primary:active { background: $dark_gray_700; }
+
+.dark .btn-secondary { background: $dark_gray_200; color: $dark_gray_600; }
+.dark .btn-secondary:hover { background: $dark_gray_300; }
+
+// Sections backgrounds
+.dark .about,
+.dark .experience { background: $dark_gray_50; }
+
+// Hero / About images frame
+.dark .hero_image::after,
+.dark .about_image::after { background: $dark_gray_200; }
+
+// Cards
+.dark .experience_card,
+.dark .work_card { background: $dark_gray_50; box-shadow: 0 4px 12px rgba(0,0,0,0.4); }
+
+// Work preview background
+.dark .work_preview { background: $dark_gray_100; }
+
+// Footer
+.dark .footer_bottom { background: $dark_gray_50; }
+.dark .footer_infor { color: $dark_gray_900; }
+
+// Copy items and icons coloring
+.dark .footer_contact_item { color: $dark_gray_600; }
+
+// Back to top button
+.dark #backToTop { background: $dark_gray_100; color: $dark_gray_900; }
+.dark #backToTop:hover { background: $dark_gray_200; }
+
+// Links reveal detail arrow color
+.dark .work_link_detail span { color: $dark_gray_600; }
+
+// Online dot (keep green but subtle shadow difference optional)
+.dark .online-dot::after { background-color: #10b981; }
+
+// Preloader dots color override
+.dark .preloader circle { fill: $dark_gray_900; }
+
+// Flicker emoji color (keep as-is) optional glow
+.dark .flicker { filter: drop-shadow(0 0 4px rgba(255,255,255,0.25)); }
+
+// Transition for smooth theme switching
+html.dark, body.dark, .dark .navbar, .dark .footer, .dark .hero, .dark .about, .dark .experience, .dark .work_card, .dark .experience_card, .dark .work_preview, .dark .work_information {
+  transition: background-color .4s ease, color .4s ease, box-shadow .4s ease;
+}
+
+.dark h1, .dark h2, .dark h3, .dark h4, .dark h5, .dark h6 { color: $dark_gray_900 !important; }

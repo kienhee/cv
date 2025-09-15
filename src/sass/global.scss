@@ -9,3 +9,5 @@
 @import "./section/skill.scss";
 @import "./section/experience.scss";
 @import "./section/work.scss";
+// Import dark theme partial (renamed to avoid ambiguity)
+@import "./themes/_dark";
