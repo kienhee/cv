@@ -2,6 +2,10 @@
 
 This project uses [Sass](https://sass-lang.com/) for styling. The main Sass file is located at `src/sass/global.scss` and is compiled to `src/styles/global.css`.
 
+```
+npm install -g sass 
+```
+
 ## Getting Started
 
 1. Make sure you have [Sass](https://sass-lang.com/install) installed.

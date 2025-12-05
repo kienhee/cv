@@ -15,10 +15,12 @@
 // Navbar
 .dark .navbar { background: $dark_gray_50; border-bottom: 1px solid $dark_gray_200; }
 .dark .navbar_logo { color: $dark_gray_900; }
-.dark .navbar_links_item:not(:last-child) a::after { background-color: $dark_gray_900; }
+.dark .navbar_toggle span { background: $dark_gray_900; }
+.dark .navbar_toggle.open span { background: $dark_gray_50; }
+.dark .navbar_links_item:not(:last-child) a::after { background-color: $dark_gray_100; }
 .dark .navbar_links_item.active:not(:last-child),
 .dark .navbar_links_item:not(:last-child) a:hover,
-.dark .navbar_links_item:not(:last-child) a.active { color: $dark_gray_900; }
+.dark .navbar_links_item:not(:last-child) a.active { color: $dark_gray_100;  }
 
 // Progress bar
 .dark #scrollProgressBar { background-color: $dark_gray_900; }
